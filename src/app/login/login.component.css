@@ -21,6 +21,11 @@ input {
     box-sizing: border-box;
 }
 
+/* .btn-box {
+    display: flex;
+    gap: 2;
+} */
+
 button {
     background-color: #4caf50;
     color: white;
@@ -28,4 +33,6 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 2px;
 }
+

@@ -1,1 +1,59 @@
-<h1>Hello this is company details</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Table</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin: 20px;
+    }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>ID  </th>
+        <th>Employee Name</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let items of objfromOfCompany ">
+      <tr>
+        <td><button (click)="goToCompanyEditSectio(items)">Edit</button></td>
+        <td>{{items.id}}  </td>
+        <td>{{items.name}}</td>
+        <td>{{items.address}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</body>
+</html>
